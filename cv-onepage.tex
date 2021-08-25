@@ -1,0 +1,130 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+\usepackage[a4paper, margin=0.5in]{geometry}
+\title{Curriculum vitae}      
+\author{Yash Srivastav}
+
+\usepackage{multicol}     %% Allows to create more than two columns
+\usepackage{array}        %% For adjusting column widths
+\usepackage{fontawesome}
+\usepackage[hidelinks, unicode]{hyperref}
+\usepackage[compact]{titlesec}
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\graphicspath{ {./media/} }
+\usepackage[backend=biber]{biblatex}
+%\usepackage{natbib}
+\usepackage{filecontents}
+
+\bibliography{mybib.bib}
+
+\usepackage{enumitem}
+% \setlist[itemize]{leftmargin=*}
+\setitemize{noitemsep,topsep=0pt,parsep=0.5pt,partopsep=0.75pt,leftmargin=*}
+
+\makeatletter
+\newcommand{\strong}[1]{\@strong{#1}}
+\newcommand{\@@strong}[1]{\textbf{\let\@strong\@@@strong#1}}
+\newcommand{\@@@strong}[1]{\textnormal{\let\@strong\@@strong#1}}
+\let\@strong\@@strong
+\makeatother
+
+\newcommand{\cvsection}[1]{
+  \section*{\sc #1}
+  \vspace{-2mm}
+  \hrulefill
+  \vspace{.2cm}
+}
+
+\newcommand{\specialcvsection}[1]{
+  \section*{\sc #1}
+}
+
+\newenvironment{cvhonors}{\begin{itemize}}{\end{itemize}}
+\newenvironment{cvitems}{\begin{itemize}}{\end{itemize}}
+\newenvironment{cventries}{}{}
+
+\newcommand{\cvhonor}[4]{\item #1, #2}
+
+\newcommand{\cventry}[5]{
+  {\small \strong{#2}} \hfill \emph{\footnotesize #3} \\
+  {\small \emph{#1} \hfill #4}
+
+  #5
+  \vspace{2mm}
+}
+
+\newcommand{\smallcventry}[6]{
+  {\small \strong{#2}} \hfill \emph{\footnotesize #5} \\
+  {\footnotesize \emph{#1, #3} \hfill #4}
+  \vspace{2mm}
+}
+
+\newcommand{\ONEPAGE}{}
+% \newcommand{\PHOTO}{}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\titlespacing*{\section}{0pt}{5pt plus 0pt minus 0pt}{0pt plus 2pt minus 2pt}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begingroup
+\hyphenpenalty 10000
+\exhyphenpenalty 10000
+
+
+
+\begin{minipage}[t]{\textwidth}
+{\Huge\textbf{\sc Shivam Kumar}}
+\hfill
+shivamkm07@gmail.com \faEnvelope
+
+
+Computer Science Undergraduate
+\hfill
+\href{https://github.com/shivamkm/}{shivamkm \faGithub}
+\\
+Indian Institute of Technology, Kanpur
+%Department of Computer Science and Engineering
+\hfill
+\href{https://www.linkedin.com/in/shivamkm07/}{shivamkm07 \faLinkedin}\\
+%+91-7054133662 \faMobile \\
+%Indian Institute of Technology, Kanpur
+\hfill +91-9129085031 \faMobile
+%+91-7054133662 \faMobile \\
+\end{minipage}
+% \begin{minipage}[t]{0.14\textwidth}
+%   \vspace{-2mm}
+%   \begin{center}
+%     \includegraphics[width=0.44\textwidth]{dp}
+%   \end{center} 
+% \end{minipage}
+\input{sections/education.tex}
+\begin{minipage}[t]{0.49\textwidth}
+  \vspace{3mm}
+  \input{sections/academic.tex}
+  \input{sections/experience.tex}
+  \input{sections/project.tex}
+  \input{sections/publications.tex}
+  
+     \input{sections/skills.tex}
+ % \input{sections/misc.tex}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+  \vspace{3mm}
+  \input{sections/project2.tex}
+  \input{sections/positions.tex}
+\end{minipage}
+\input{sections/coursework.tex}
+ % \input{sections/positions.tex}
+\endgroup
+\end{document}
