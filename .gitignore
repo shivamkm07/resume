@@ -1,0 +1,17 @@
+references
+cv-onepage.pdf
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fls
+*.out
+*.fdb_latexmk
+*.log
+*.xml
+*.synctex.gz
+.vscode
+auto
+*.rel
+comment.cut
+*.synctex(busy)
