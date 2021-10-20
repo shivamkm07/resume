@@ -27,10 +27,10 @@
 \setitemize{noitemsep,topsep=0pt,parsep=0.5pt,partopsep=0.75pt,leftmargin=*}
 
 \makeatletter
-\newcommand{\strong}[1]{\@strong{#1}}
-\newcommand{\@@strong}[1]{\textbf{\let\@strong\@@@strong#1}}
-\newcommand{\@@@strong}[1]{\textnormal{\let\@strong\@@strong#1}}
-\let\@strong\@@strong
+\newcommand{\mystrong}[1]{\@mystrong{#1}}
+\newcommand{\@@mystrong}[1]{\textbf{\let\@mystrong\@@@mystrong#1}}
+\newcommand{\@@@mystrong}[1]{\textnormal{\let\@mystrong\@@mystrong#1}}
+\let\@mystrong\@@mystrong
 \makeatother
 
 \newcommand{\cvsection}[1]{
@@ -51,7 +51,7 @@
 \newcommand{\cvhonor}[4]{\item #1, #2}
 
 \newcommand{\cventry}[5]{
-  {\small \strong{#2}} \hfill \emph{\footnotesize #3} \\
+  {\small \mystrong{#2}} \hfill \emph{\footnotesize #3} \\
   {\small \emph{#1} \hfill #4}
 
   #5
@@ -59,7 +59,7 @@
 }
 
 \newcommand{\smallcventry}[6]{
-  {\small \strong{#2}} \hfill \emph{\footnotesize #5} \\
+  {\small \mystrong{#2}} \hfill \emph{\footnotesize #5} \\
   {\footnotesize \emph{#1, #3} \hfill #4}
   \vspace{2mm}
 }
