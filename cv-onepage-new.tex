@@ -1,0 +1,273 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+\usepackage[a4paper, top=0.3in, bottom=0.3in, left=0.4in, right=0.4in]{geometry}
+
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[hidelinks, unicode]{hyperref}
+\usepackage[compact]{titlesec}
+\usepackage{hyphenat}
+\usepackage{enumitem}
+
+\setitemize{noitemsep, topsep=2pt, parsep=2.5pt, partopsep=1pt, leftmargin=*}
+
+\titlespacing*{\section}{0pt}{4pt plus 0pt minus 0pt}{0pt plus 2pt minus 2pt}
+
+% Section heading style
+\newcommand{\cvsection}[1]{
+  \vspace{4mm}
+  {\sc \fontsize{9.5pt}{11pt}\selectfont #1}
+  \vspace{-1.5mm}
+  \hrulefill
+  \vspace{2mm}
+}
+
+% Work entry: {Title}{Company}{Location}{Dates}
+\newcommand{\cventry}[4]{
+  {\small \textbf{#1}} \hfill {\footnotesize #3} \\[-1.5pt]
+  {\small \emph{#2}} \hfill {\footnotesize \emph{#4}}
+}
+
+% Compact entry: {Title}{Subtitle}{Dates}
+\newcommand{\cventrycompact}[3]{
+  {\small \textbf{#1}} \hfill {\footnotesize \emph{#3}} \\[-1.5pt]
+  {\small \emph{#2}}
+}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begingroup
+\hyphenpenalty 10000
+\exhyphenpenalty 10000
+
+%% ===== HEADER =====
+\begin{minipage}[t]{\textwidth}
+{\Huge\textbf{\sc Shivam Kumar}}
+\hfill
+shivamkm07@gmail.com \faEnvelope
+\\
+Software Development Engineer II, Microsoft
+\hfill
+\href{https://github.com/shivamkm07}{shivamkm07 \faGithub}
+\\
++91-9129085031 \faMobile
+\hfill
+\href{https://www.linkedin.com/in/shivamkm07}{shivamkm07 \faLinkedin}
+\end{minipage}
+
+\vspace{0mm}
+
+%% ===== EDUCATION =====
+\cvsection{Education}
+\vspace{1mm}
+{\small \textbf{B.Tech, Computer Science and Engineering}}
+\hfill {\small \textbf{CGPA: 9.4/10.0}} \\[-1pt]
+{\small Indian Institute of Technology, Kanpur}
+\hfill {\small \emph{2017 -- 2021}}
+\\[2pt]
+{\small AISSCE (XII), Sunbeam English School, CBSE}
+\hfill {\small 96.4\%, \emph{2017}}
+
+\vspace{2mm}
+
+%% ===== TWO COLUMNS =====
+\begin{minipage}[t]{0.485\textwidth}
+\vspace{0mm}
+
+%% --- WORK EXPERIENCE ---
+\cvsection{Work Experience}
+
+\cventry{Software Development Engineer II}
+{Microsoft -- Azure Container Apps}
+{Hyderabad}{Jul'24 - Present}
+\vspace{0.5mm}
+\begin{itemize}
+  \item Designed \textbf{AI-powered SRE agents} for
+    ACA incident diagnostics, reducing P50
+    time-to-mitigate by \textbf{97\%} (185$\rightarrow$6 min);
+    evolving toward \textbf{autonomous auto-repair}
+  \item Built \textbf{Session Management APIs} and
+    fixed async execution bugs for ACA Sessions,
+    improving stability for \textbf{$\sim$300 customers};
+    enabled billing optimization for Fabric team
+  \item Expanded \textbf{Azure Functions on ACA} ---
+    keys management, KEDA rules, drain, tracing
+    for \textbf{$\sim$1,322 apps}; enabled
+    \textbf{Foundry Control Plane} for ACA agents
+  \item Led \textbf{Dapr AKS Extension} rollouts
+    (v1.15, v1.16) across all Azure regions;
+    remediated CVEs for \textbf{$\sim$400 clusters};
+    integrated CodeQL for pipeline security
+  \item Integrated \textbf{Azure Key Vault} with
+    Managed Environment Storage API, securing
+    \textbf{$\sim$27K daily API calls} by eliminating
+    raw connection strings
+  \item On-call DRI: resolved \textbf{200+ incidents}
+    (27+ CRIs), outperforming team baselines;
+    mentored new hires; presented at
+    \textbf{IDC Pinnacle}
+\end{itemize}
+
+\vspace{3mm}
+
+\cventry{Software Development Engineer}
+{Microsoft -- Azure Container Apps / Dapr}
+{Hyderabad}{Jul'21 - Jul'24}
+\vspace{0.5mm}
+\begin{itemize}
+  \item Contributed to \textbf{Dapr} (CNCF OSS) ---
+    upgraded MQTT, CosmosDB, Config API, Redis,
+    PostgreSQL to stable; implemented Workflow
+    \textbf{cascade terminate/purge} across SDKs
+  \item Architected \textbf{internal fork} across 5
+    repos with CI/CD and release pipelines;
+    automated releases within \textbf{$<$1 day SLA}
+  \item Migrated to \textbf{OneBranch/1ES} with Ev2
+    deployment; added multi-arch, Mariner and
+    distroless images; 1P registry migration
+  \item Enabled \textbf{airgap install}, winget and
+    MSI for Dapr CLI; added bulk subscribe in
+    Azure Event Hubs; resolved customer issues
+    on GitHub and Discord
+  \item Added \textbf{Dapr Workflow} performance
+    tests identifying P0 bugs; published combined
+    coverage reports for conformance and
+    certification tests
+  \item Delivered nightly builds for ACA;
+    contributed to AKS Extension GA requirements;
+    resolved issues for Container Apps team
+\end{itemize}
+
+\vspace{3mm}
+
+\cventrycompact{Quantitative Research Intern}
+{JP Morgan \& Chase -- E-Trading, Mumbai}
+{May'20 - Jul'20}
+\vspace{0.5mm}
+\begin{itemize}
+  \item Built price prediction models using
+    \textbf{LSTM}, neural networks, and regression
+    with univariate feature selection
+  \item Improved predictive power by \textbf{40\%}
+    for HK names via feature standardization
+  \item Implemented L1 and L2 features for
+    optimizing model parameterization
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+\vspace{0mm}
+
+%% --- RESEARCH EXPERIENCE ---
+\cvsection{Research Experience}
+
+\cventrycompact{Data Race Detection, Task-Parallel Programs}
+{Supervisor: Prof. Swarnendu Biswas, IIT Kanpur}
+{Jun'19 - Aug'21}
+\vspace{0.5mm}
+\begin{itemize}
+  \item Designed novel algorithm \textbf{Tasker}
+    integrating vector clocks with tree-based
+    techniques; used \textbf{LLVM} pass for memory
+    instrumentation
+  \item Achieved \textbf{1.48X speedup} over PTRacer
+    baseline on 128GB Intel Xeon system
+  \item \emph{``Efficient Data Race Detection of
+    Structured Task Parallel Programs Using
+    Vector Clocks''} --- S.~Kumar, A.~Agrawal,
+    S.~Biswas $|$ \emph{Submitted, ISCGO 2022}
+\end{itemize}
+
+%% --- TECHNICAL SKILLS ---
+\cvsection{Technical Skills}
+\vspace{1mm}
+{\small
+\begin{tabular}{@{} l @{\hspace{6pt}} p{5.1cm}}
+  \textbf{Languages:} & Go, Python, C\#/.NET,
+    JavaScript/TypeScript, C/C++ \\[2pt]
+  \textbf{Cloud:} & Azure (ACA, AKS, Functions,
+    Key Vault, Event Hubs, CosmosDB) \\[2pt]
+  \textbf{Infra:} & Kubernetes, Docker, Dapr
+    (CNCF), Helm, Container Registries \\[2pt]
+  \textbf{Tools:} & OneBranch, Ev2, ADO Pipelines,
+    GitHub Actions, Geneva, CodeQL \\[2pt]
+  \textbf{Domains:} & Distributed Systems, AI/LLM
+    Agents, CI/CD, Microservices, SRE \\
+\end{tabular}
+}
+
+%% --- ACADEMIC PROJECTS ---
+\cvsection{Academic Projects}
+
+\noindent
+{\small
+\href{https://github.com/shivamkm/java-compiler}
+  {\textbf{Java Compiler}} (CS335)
+  --- Designed lexer, parser, and 3-address
+  code generation using PLY; support for
+  classes, functions, and interfaces
+\\[5pt]
+\href{https://github.com/shivamkm/gemOS}
+  {\textbf{GemOS}} (CS330)
+  --- Implemented mmap, pagefaults, lazy
+  allocation, and copy-on-write fork syscalls
+\\[5pt]
+\href{https://github.com/shivamkm/machine-learning}
+  {\textbf{Machine Learning}} (CS771)
+  --- CNN image classification using Keras,
+  SGD, multi-label Bonsai recommender system
+\\[5pt]
+\href{https://github.com/shivamkm/decipher}
+  {\textbf{Cipher Decoder}} (CS641)
+  --- Differential cryptanalysis of 3-DES;
+  decryption of Caesar, Vigenere ciphers
+\\[5pt]
+\href{https://github.com/shivamkm/sat-solver}
+  {\textbf{SAT Solver}} (CS202)
+  --- DPLL algorithm; encoded diagonal sudoku
+  in DIMACS propositional logic
+\\[5pt]
+\href{https://github.com/shivamkm/mobile-app}
+  {\textbf{MERN Mobile App}} (CS252)
+  --- Full-stack app with React Native,
+  Node.js, MongoDB, and secure login
+}
+
+%% --- ACHIEVEMENTS & OTHERS ---
+\cvsection{Achievements \& Others}
+\begin{itemize}[parsep=3pt]
+  \item \textbf{RockStar Award}, Microsoft
+    ('22, '23) for exceptional contributions
+  \item \textbf{Academic Excellence Award}
+    ($\times$2), IIT Kanpur ('17-18, '18-19)
+  \item Ram Prakash Chopra Memorial Scholarship
+  \item JEE Advanced \textbf{AIR 715} $|$
+    KVPY Scholar $|$ NSE Physics \textbf{Top 1\%}
+  \item Academic Mentor, Counselling Service,
+    IIT Kanpur ('18-19)
+  \item Secretary, Dramatics Club,
+    IIT Kanpur ('18-19)
+\end{itemize}
+
+%% --- RELEVANT COURSES ---
+\cvsection{Relevant Courses}
+\vspace{0.5mm}
+{\small
+\begin{tabular}{@{} l @{\hspace{8pt}} l}
+  Operating Systems & Machine Learning \\
+  Compiler Design & Modern Cryptology \\
+  Computer Networks & Parallel Computing \\
+  Adv. Algorithms & NLP \\
+\end{tabular}
+}
+
+\end{minipage}
+
+\endgroup
+\end{document}

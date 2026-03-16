@@ -1,0 +1,242 @@
+Nov 2021:
+WHAT:
+
+Implemented complete DAPR internal fork setup
+5 repos forked: dapr, cli, dashboard, components-contrib and kit
+Build, Codesigning and release pipelines
+Automated upgrade to latest OSS releases
+End-to-end tests for unintended bugs
+Dapr Integration with Azure Container Apps
+Added a separate component for k8se-envoy specific name resolution
+
+WHY:
+
+Dapr Supportability towards Microsoft internal distributed application services
+Provision to add internal changes which can’t be pushed to OSS
+Support for making Dapr as an internal and advanced Azure offering
+
+IMPACT:
+
+#Individual Impact:
+
+AKS and Container Apps using internal dapr images built and pushed from pipelines
+Dapr upgradability support to latest OSS releases in minimal time
+
+#Contribution to Others:
+
+Supported AKS adoption of DAPR by making internal image available in MCR with upgradability support
+Supported Container Apps integration of Dapr by making required changes in k4apps to use internally published images
+
+#Help from Others:
+
+Leveraged complete support of Dapr Redmond Team for the internal fork setup
+Took help from Mukundan for debugging several issues while making the required changes
+
+
+May 2022:
+WHAT:
+Dapr OSS
+Upgraded MQTT PubSub Component from alpha to Stable
+Added MQTT Certification Test
+Contributed fix to one of upstream libraries used in the component
+Enabled Airgap Installation Support in Dapr
+Worked with external contributor for the CLI change
+Created, managed and maintained installer-bundle repo, taking care of bundle release at every dapr/cli releases
+Worked in Collaboration with IDC as well as Redmond team in resolving some of P0 items in 1.7 release
+Dapr Internal Fork
+Added support for multi-arch (ARM64, ARM, AMD64) dapr as well as dashboard images in Internal fork
+Worked through finalizing branching as well as merge strategy in fork, resolving issues found in 1.6 internal release
+Automated most part of internal release process as `automerge` pipeline
+Contributed to some of Dapr AKS Extension GA Requirements
+Resolved issues encountered by Container Apps Team in using internal dapr releases
+
+WHY:
+Contribute towards upgrading several dapr components to stable
+Improve Dapr Adoption by providing seamless experience to users, resolving issues they have
+Promote external contributions to Dapr from open source community
+Improve Dapr Adoption across Microsoft Distributed Services by providing active support
+Reduce delay time between Dapr OSS Releases and Internal Releases
+
+IMPACT:
+Individual Contributions:
+Automated merging OSS dapr to internal fork, significantly reducing delays in internal releases
+Upgraded one of dapr components to stable
+Contribution from Others:
+Took Support from Akhila, Shubham in resolving some of AKS Extension GA requirements
+Took Akhila's support in resolving one of container app issues
+Took IDC as well as Redmond team support in resolving several issues encountered while working in OSS Dapr features
+Contribution to Others:
+Collaborated with one of the external contributors for dapr airgap installation support
+Helped teammates resolving issues encountered in dapr, infrastructure, features they r working etc. as per my knowledge
+
+
+Nov 2022:
+Advance seamless adoption of Azure services with support of latest features/add-ons
+Dapr Internal Releases within SLA of 1 Day of OSS release
+Re-designing internal repository to patch based model for more efficient and faster releases
+Separate internal images per service to enable service specific patches
+1P Container Registry Migration for Dapr
+Adding Mariner images for Dapr
+Adding missing distroless images in mcr
+Nightly builds for Azure Container Apps
+
+Accelerate Microsoft contribution in Open-Source development, improving end-to-end customer experiences
+Azure CosmosDB statestore marked to stable
+Mariner image support in Dapr CLI
+MSI Installer for Dapr CLI
+Dapr availability in winget including automations to update winget packages repository
+Bug fixes in components-contrib, CLI, dapr etc.
+Installer Bundle Releases with every dapr release
+
+May 2023:
+Employee Response:
+Advance seamless adoption of Azure services with support of latest features
+
+Ensuring pipeline reliability and functionality by fixing bugs and adding or updating patches as needed.
+Delivering Dapr Internal images within the agreed time frame of one day.
+Accelerate Microsoft contribution in Open-Source development
+Marked Configuration API building block stable as part of 1.11 release
+Upgraded Redis and PostgreSQL configuration stores to stable
+Added required tests for both API and component implementations and fixed bugs
+Updated SDK implementations to conform with accepted uniform specification
+Supported Dapr OSS by resolving issues and bugs
+Published combined coverage reports for conformance and certification tests
+
+Nov 2023:
+1. Advance seamless adoption of Azure services with support of latest features
+
+Handled releasing Dapr 1.11.* and 1.12.* internal releases within SLA
+Backported patches and fixes into internal repo to be consistent with OSS
+Scoped possible solutions for adding support for Dapr service invocation in ACI
+2. Accelerate Microsoft contribution in Open-Source development
+
+Added bulk subscribe support in Azure Eventhubs
+Added performance test for Dapr workflows
+Identified several P0 bugs as part of the test and collaborated to resolve some as well
+Resolved several customer issues reported in Github(Runtime, Contrib and SDKs) and Discord
+Added logging Enhancements in Workflows for better debugging
+
+
+May 2024:
+What impact did you have for each of your core priorities?
+Employee Response:
+1. Advance Dapr Adoption in Azure
+Handled Dapr Internal and AKS extension releases within SLA
+Worked on migrating Dapr CI/CD pipelines to 1ES for compliance agreements
+Resolved customer issues reported in ICMs in Dapr AKS extension
+Resolved Vulnerability issues reported in S360 for Dapr images
+2. Accelerate Microsoft contribution in Open-Source development
+Added support for Cascade Terminate and Purge in Dapr Workflows, including changes in runtime and SDKs
+Collaborated with external contributor to add metrics for Dapr Workflows
+Logging enhancements in Workflow runtime and SDK
+Bugfixes in DurableTask framework which works as an orchestrator for Workflow
+3. Help Launch Public Preview for ACA Sessions
+Added Performance tests for ACA sessions helping to identify the regressions in code execution
+Added bugfixes in backend container of Python code interpreter for sessions
+
+Nov 2024:
+What impact did you have for each of your core priorities?
+Employee Response:
+Contribute towards making ACA a reliable service for customers
+Successfully completed the ACA on-call rotation for two weeks, serving as both backup and primary, and resolved over 90 ICMS, including 13 CRIs.
+Addressed several critical issues and bugs in NodeJS ACA sessions and deployed the fixes to production.
+Implemented Geneva actions to manage upgrades for NodeJS sessions.
+Collaborated with the Playwright testing team to assist in developing a proof of concept using ACA sessions.
+Developing multiple data-plane APIs for sessions based on internal team feedback.
+Build customer confidence and dependability on Dapr as a service from Azure
+Released regular updates and fixes for Dapr, including several CVE fixes for image vulnerabilities, for both the AKS extension and ACA.
+Consolidated multiple pipelines for Dapr into a single OneBranch pipeline to expedite releases.
+Integrated Ev2 deployment support for Dapr pipelines to ensure compliance with Standard Deployment Practices (SDP).
+Promptly addressed and resolved AKS extension issues reported by customers.
+
+
+May 2025:
+Following contributions highlight work done for the different core priorities:
+
+ACA Sessions
+Work Done
+Added new Session Management APIs (Delete, List, Get) to improve session observability and control.
+Fixed critical async execution bugs in the code interpreter sessions along with Node.js session specific issues.
+Business Impact:
+Improved session stability and experience for ~300 external customers actively using ACA Sessions.
+Enabled early session deletion, a key requirement from the Fabric Team, helping reduce billing and optimize costs for ACA session customers.
+Core ACA Enhancements
+Work Done
+Integrated Azure Key Vault with Managed Environment Storage API, enabling secure secret handling and eliminating raw connection strings in API calls.
+Resolved CodeQL violations in container apps, improving code security and compliance.
+Business Impact:
+Provided a more secure alternative to raw account keys being used in ~27K daily storage create API calls through Azure Key Vault integration.
+Strengthened security posture and compliance, aligning with enterprise-grade standards.
+On-Call Reliability Operations
+Work Done
+Resolved ~14 CRIs and ~150 LSIs (including ~58 Sev2 alerts) as DRI ensuring high service availability.
+Delivered repair items to address root causes, reducing incident recurrence and improving system resilience.
+Business Impact:
+Ensured high service uptime and reduced operational noise through proactive issue resolution.
+ACA RCA Agent Development
+Work Done
+Built and deployed diagnostic agents to accelerate incident resolution:
+ICM Summarization Agent: Automates extraction of key insights from ICMs.
+CoreDNS Agent: Supports analysis and debugging of CoreDNS-related issues.
+Sessions Agent: Investigates session-related ICMs for both code interpreter and custom container sessions.
+Business Impact:
+Targets reduction of ~99 monthly CRIs and a P50 mitigation time of 88 hours by accelerating root cause analysis, reducing on-call load, and improving time-to-resolution.
+Dapr AKS Extension
+Work Done
+Fixed multiple security vulnerabilities and released updated, secure versions.
+Led the rollout of Dapr 1.15 across all regions.
+Expanded Dapr AKS extension availability to new regions based on customer demand.
+Business Impact:
+Upgraded ~260 subscriptions and ~400 AKS clusters to secure Dapr versions, addressing vulnerabilities and improving overall security
+Additional Contributions
+Work Done
+Presented the ACA RCA Agent at the IDC Pinnacle event, showcasing its impact on incident diagnostics and reliability.
+Completed all required trainings on time, ensuring alignment with organizational standards and continuous learning.
+Business Impact:
+Strengthened internal and external visibility while maintaining readiness through continuous learning.
+
+
+Nov 2025:
+Employee Response:
+Across the last six months, delivered measurable improvements in RCA accuracy, functions capability, livesite stability, and security posture. ACA RCA Agent performance improved sharply, Functions gained broader operational and diagnostic coverage, and AKS extension shipped stable releases with CVE fixes. Livesite outcomes exceeded ACA baselines, and CodeQL adoption strengthened security and code quality. These results were enabled by proactive backlog reduction, on-call ownership, structured problem-solving, and consistent collaboration with teammates and partner teams. Delivered 62 PRs across Functions, Sessions, and AKS extension components, reflecting sustained engineering throughput and quality improvements.
+
+Project Impact
+• ACA RCA Agent: Improved AI-aligned RCA accuracy and reduced ACA ICM timelines (P50 TTM 185→6, TTR 269→98) by introducing Sessions/Billing subagents and shifting from workflow-based to investigative prompts. Increased correctness by closing 20+ agent backlog items through targeted ICM analysis and updates across agent and subagents.
+
+• ACA Functions: Expanded core platform capabilities via function keys management commands and strengthened diagnostics via invocation tracing/summary and support for durable-events logging. Also added API spec for function ARM apis. These enhancements benefit ~1,322 external ACA Functions apps, improving security, observability, and operational efficiency.
+
+• Sessions: Enabled customer adoption and usage via .NET code interpreter support for Security Copilot Team and fixing Node.js Sessions test failures.
+
+• AKS Extension: Delivered secure, stable customer experiences via Dapr 1.15 hotfixes, Dapr 1.16 rollout, completed CVE fixes, and AustriaEast region enablement.
+
+• Security & Quality: Strengthened customer trust and code quality via CodeQL integration in the Dapr AKS Extension pipeline and cleanup of all container app CodeQL violations.
+
+• DRI Outcomes: Elevated customer-facing reliability via handling 36 Sev2 LSIs (P50 TTM 1h, P50 TTR 25h vs ACA 3.9h/60h) and 6 Sev3 CRIs (P50 TTM 19h, P50 TTR 243h vs ACA 24.25/123h).
+
+Craft
+• Improved alerts fidelity by updating 5 LSI alerts based on investigation findings.
+• Maintained secure, maintainable codebase through CodeQL integration and violation fixes.
+• Ensured reliable releases for AKS extension through sustained engineering discipline.
+
+Direction
+• Proactively improved RCA accuracy by identifying incorrect cases in ICMs and driving updates across agent components.
+• Shaped implementation for Functions keys management commands, ensuring timely completion.
+• Guided stability and security choices through timely Dapr hotfixes, CVE fixes, and region expansion work.
+
+People
+• Supported team growth by mentoring new hire Khushi and unblocking her across tasks.
+• Enabled partner team continuity by taking ad-hoc on-call shifts to support the China team during new year leave.
+• Built trust and collaboration by actively assisting teammates and contributing to CRI discussions.
+
+After Nov 2025
+1. Allowing Azure functions on ACA support for editing Keda rules
+2. FCP support for Agents created on ACA - Foundry control plane support where all agents created on ACA are shown on Foundary Control plane
+3. Support for Drain functionalty in Azure functions
+4. SRE Agent:
+a. Updating agent to auto repair - Automatically compare the agent generated RCA vs actual RCA and create repair items for the incident
+b. Automatically resolve the incidents that can be resolved
+5. Azure functions - Adding parity between Azure functions on ACA and native azure functions, Adding missing things on Azure functions on ACA
+
+
+
+
