@@ -1,0 +1,191 @@
+%-------------------------
+% Resume in LaTeX - Shubham Kumar
+% Based on: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{extarticle}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure PDF is machine readable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItemPlain{#1}\vspace{-4pt}}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Shubham Kumar} \\ \vspace{2pt}
+    \small B.Tech Computer Science Engineering (3rd Year) \\ \vspace{2pt}
+    \href{tel:+917870841473}{7870841473} \,$\vcenter{\hbox{\footnotesize\faMobile}}$
+    $|$
+    \href{mailto:shubhamkm07@gmail.com}{shubhamkm07@gmail.com} \,$\vcenter{\hbox{\footnotesize\faEnvelope}}$
+    $|$
+    \href{https://www.linkedin.com/in/shubham-kumar-05a9a5285}{linkedin.com/in/shubham-kumar} \,$\vcenter{\hbox{\footnotesize\faLinkedin}}$
+    $|$
+    \href{https://github.com/myselfshubham1}{github.com/myselfshubham1} \,$\vcenter{\hbox{\footnotesize\faGithub}}$
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ITM University}{CGPA: 8.3/10.0}
+      {B.Tech -- Computer Science Engineering}{2023 -- 2027}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++, Java, Python, SQL} \\
+     \textbf{Core CS}{: Data Structures \& Algorithms, Object-Oriented Programming, DBMS, Operating Systems} \\
+     \textbf{Backend / Systems}{: C++ STL, File Handling, MySQL, REST APIs, Postman} \\
+     \textbf{AI / ML}{: NumPy, Pandas, Scikit-learn, YOLOv8, OpenCV} \\
+     \textbf{Web}{: HTML, CSS, JavaScript}
+    }}
+ \end{itemize}
+
+%-----------COURSEWORK-----------
+\section{Relevant Coursework}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      Data Structures \& Algorithms $\cdot$
+      Object-Oriented Programming $\cdot$
+      Database Management Systems $\cdot$
+      Operating Systems $\cdot$
+      Computer Networks $\cdot$
+      Software Engineering $\cdot$
+      Discrete Mathematics $\cdot$
+      Machine Learning
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Development Intern -- Blog Post Management System}{Industrial Training}
+      {Intellige IT Studio}{Java, MySQL, REST APIs}
+      \resumeItemListStart
+        \resumeItemPlain{Completed industry-oriented software development training and developed a fully functional \textbf{Blog Post Management System} using Java, MySQL, HTML, CSS, REST APIs, and Postman.}
+        \resumeItemPlain{Designed and implemented \textbf{REST-based backend APIs} for blog and user management supporting full CRUD operations (create, update, search, delete).}
+        \resumeItemPlain{Implemented \textbf{User and Admin roles} with role-based access control for secure content management.}
+        \resumeItemPlain{Enabled tracking of creation and update timestamps for blogs, ensuring data audit capabilities.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{MCP Server -- AI-Driven 3D Model Generation} $|$ \emph{Python, Socket Programming, Blender, Cursor AI}}{}
+      \resumeItemListStart
+        \resumeItemPlain{Designed and implemented a \textbf{custom MCP server} using socket-based communication for real-time tool integration.}
+        \resumeItemPlain{Integrated \textbf{Blender \& Cursor AI} to enable 3D object generation using natural language prompts.}
+        \resumeItemPlain{Built a \textbf{scalable, real-time system} capable of connecting multiple tools simultaneously.}
+        \resumeItemPlain{Enabled full \textbf{customization and modification} of 3D models based on user input.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Object Detection using YOLOv8} $|$ \emph{Python, YOLOv8, OpenCV}}{}
+      \resumeItemListStart
+        \resumeItemPlain{Developed a \textbf{real-time object detection system} using the YOLOv8 deep learning framework.}
+        \resumeItemPlain{Trained and evaluated the model on a dataset of \textbf{$\sim$10,000 images} to improve detection accuracy.}
+        \resumeItemPlain{Implemented \textbf{live camera-based detection} with high accuracy for real-world applications.}
+        \resumeItemPlain{Applied data preprocessing and model tuning techniques to optimize performance.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------MINI PROJECTS-----------
+\section{Mini Projects}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{To-Do Application} -- Full-stack task management app with CRUD functionality \\
+      \textbf{Chatbot} -- Interactive conversational bot using rule-based/NLP techniques \\
+      \textbf{Calculator} -- Multi-function calculator application with scientific operations \\
+      \textbf{Profile Calculator} -- Profile analytics and scoring tool \\
+      \textbf{Number Guessing Game} -- Interactive CLI game with randomized logic and difficulty levels
+    }}
+ \end{itemize}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements \& Hackathons}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      $\vcenter{\hbox{\tiny$\bullet$}}$ \textbf{Winner} -- Hackathon conducted by ITM University \\
+      $\vcenter{\hbox{\tiny$\bullet$}}$ \textbf{Finalist} -- ``FinShield'' Hackathon conducted by Bank of India; presented solution at IIT Hyderabad \\
+      $\vcenter{\hbox{\tiny$\bullet$}}$ \textbf{Participant} -- Smart India Hackathon (SIH) and actively participated in multiple inter-college hackathons
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
