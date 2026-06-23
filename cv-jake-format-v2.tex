@@ -99,9 +99,9 @@
 \section{Summary}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     Software Development Engineer II at Microsoft (Azure Container Apps) with 5+ years building cloud-native platforms, AI-powered SRE agents, and CNCF open-source infrastructure (Dapr). Shipped LLM-based RCA agents that cut P50 incident time-to-mitigate by \textbf{97\%} (185$\rightarrow$6 min) and time-to-resolve by \textbf{64\%}; led multi-region rollouts touching \textbf{$\sim$400 AKS clusters} and \textbf{$\sim$300 external customers}; architected internal forks and OneBranch/Ev2 pipelines for 5 Dapr repositories with \textbf{$<$1 day OSS release SLA}. \\
+     Software Development Engineer II at Microsoft (Azure Container Apps) with 5+ years building cloud-native platforms, AI-powered SRE agents, and CNCF open-source infrastructure (Dapr). Designed RCA agents that cut P50 incident time-to-mitigate by \textbf{97\%} (185$\rightarrow$6 min) --- squad won \textbf{IDC Pinnacle FY'26 best AI success story award} ($\sim$200+ teams); drove \textbf{ACA Express Public Preview} enablement on ADC targeting \textbf{$\sim$\$40M annual COGs savings}; shipped \textbf{Foundry Control Plane integration} for $\sim$2K agentic apps; architected internal forks and OneBranch/Ev2 pipelines for 5 Dapr repos with \textbf{$<$1 day OSS release SLA}. \\
      \vspace{2pt}
-     \textbf{Focus}{: Distributed Systems $\cdot$ AI/LLM Agents $\cdot$ Site Reliability (SRE) $\cdot$ CI/CD \& Release Engineering $\cdot$ Kubernetes \& Container Platforms}
+     \textbf{Focus}{: Distributed Systems $\cdot$ AI/LLM Agents \& AI-Augmented Engineering $\cdot$ Site Reliability (SRE) $\cdot$ CI/CD \& Release Engineering $\cdot$ Kubernetes \& Container Platforms}
     }}
  \end{itemize}
 
@@ -113,31 +113,31 @@
       {Software Development Engineer II}{Jul 2024 -- Present}
       {Microsoft -- Azure Container Apps}{Hyderabad, India}
       \resumeItemListStart
-        \resumeItemPlain{Designed and deployed \textbf{AI-powered SRE agents} for Azure Container Apps incident diagnostics, reducing P50 time-to-mitigate by \textbf{97\% (185$\rightarrow$6 min)} and time-to-resolve by \textbf{64\%}; evolving toward \textbf{autonomous auto-repair} with automated RCA comparison; enabled \textbf{Foundry Control Plane} for ACA-hosted agents.}
+        \resumeItemPlain{Designed and deployed \textbf{AI-powered SRE agents} for ACA --- reduced P50 time-to-mitigate by \textbf{97\% (185$\rightarrow$6 min)} and time-to-resolve by \textbf{64\%}; sustained \textbf{$\sim$99\% RCA coverage} with \textbf{$\sim$76\% on-call accuracy}, \textbf{auto-resolving 57 of $\sim$400 CRIs} and authoring \textbf{$\sim$132 repair items} in 6 months; stood up Ev2 release pipeline. Squad won \textbf{IDC Pinnacle FY'26 best AI success story} ($\sim$200+ teams).}
+        \resumeItemPlain{Drove \textbf{ACA Express Public Preview} enablement on \textbf{Azure Dev Compute (ADC)} --- closed P0 gaps via \textbf{ephemeral volume support} and \textbf{Log Analytics customer-log delivery} landing on both ADC and ACA; migration path for \textbf{$\sim$100K+ ACA environments}, targeting \textbf{$\sim$\$40M annual COGs savings}.}
+        \resumeItemPlain{Designed and shipped \textbf{Foundry Control Plane integration} for ACA --- new preview API across clouds, Control Plane, and CRD; supports customer-declared and auto-detection modes; covers \textbf{$\sim$2,000+ agentic apps}, making ACA a first-class hosting target for Foundry agents.}
         \resumeItemPlain{Built \textbf{Session Management APIs} and fixed critical async execution bugs for ACA Sessions, improving stability for \textbf{$\sim$300 external customers}; enabled early session deletion for the Fabric team, optimizing billing and costs.}
-        \resumeItemPlain{Expanded \textbf{Azure Functions on ACA} platform --- function keys management, invocation tracing, durable-events logging, KEDA scaling rules, and drain functionality, benefiting \textbf{$\sim$1,322 external apps}.}
-        \resumeItemPlain{Led \textbf{Dapr AKS Extension} rollouts (v1.15, v1.16) across all Azure regions; remediated CVEs across \textbf{$\sim$400 AKS clusters}; integrated CodeQL for pipeline security.}
-        \resumeItemPlain{Integrated \textbf{Azure Key Vault} with Managed Environment Storage API, securing \textbf{$\sim$27K daily API calls} by eliminating raw connection strings.}
-        \resumeItemPlain{Served as \textbf{on-call DRI} resolving \textbf{200+ incidents} including 27+ CRIs, outperforming team baselines.}
+        \resumeItemPlain{Stabilized \textbf{Azure Functions on ACA} ($\sim$5K managed + $\sim$1,322 external apps) --- shipped \textbf{graceful drain} (retired 3 recurring CRIs), queueLength/scale-rule overrides, JWT clock-skew leeway, function keys management, and KEDA scaling rules; migrated Functions telemetry to \textbf{central capps Kusto clusters}, unblocking alerting and agent skills.}
+        \resumeItemPlain{Led \textbf{Dapr AKS Extension} rollouts (v1.15, v1.16) across all Azure regions with daily artifact refresh; remediated CVEs across \textbf{$\sim$400 AKS clusters} and integrated CodeQL; integrated \textbf{Azure Key Vault} with Managed Environment Storage API, securing \textbf{$\sim$27K daily API calls} by eliminating raw connection strings.}
+        \resumeItemPlain{Served as \textbf{on-call DRI} across multiple rotations resolving \textbf{240+ incidents (65+ CRIs, 36 Sev2 LSIs)} --- P50 TTM 1h / TTR 25h vs ACA 3.9h/60h baselines; delivered repair items reducing recurrence; mentored 2 new hires through first on-call rotations.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Software Development Engineer}{Jul 2021 -- Jul 2024}
       {Microsoft -- Azure Container Apps / Dapr}{Hyderabad, India}
       \resumeItemListStart
-        \resumeItemPlain{Contributed to \textbf{Dapr} (CNCF open-source project) --- improved several components and APIs to stable; implemented \textbf{cascade terminate/purge} for Dapr Workflows across runtime and SDKs; added bulk subscribe support in Azure Event Hubs; added workflow performance tests identifying P0 bugs.}
+        \resumeItemPlain{Contributed to \textbf{Dapr} (CNCF) --- upgraded MQTT PubSub, CosmosDB, Redis/PostgreSQL stores, and Configuration API to stable; implemented \textbf{cascade terminate/purge} for Dapr Workflows across runtime and SDKs; added bulk subscribe in Azure Event Hubs and workflow perf tests identifying P0 bugs.}
         \resumeItemPlain{Enabled \textbf{airgap installation}, winget, and MSI for Dapr CLI; published combined coverage reports; resolved customer issues on GitHub and Discord.}
         \resumeItemPlain{Architected \textbf{internal fork and CI/CD infrastructure} across 5 Dapr repositories; automated OSS-to-internal releases within \textbf{$<$1 day SLA}; consolidated into \textbf{OneBranch-compliant} pipelines with Ev2 deployment.}
         \resumeItemPlain{Added \textbf{multi-arch support} (ARM64, ARM, AMD64), Mariner and distroless images; handled 1P Container Registry migration; delivered nightly builds for ACA; contributed to AKS Extension GA requirements.}
-        \resumeItemPlain{Helped launch \textbf{ACA Sessions public preview} --- added support for Node.js code interpreter sessions; fixed critical bugs in Python and Node.js sessions; added performance tests identifying regressions.}
+        \resumeItemPlain{Helped launch \textbf{ACA Sessions public preview} --- added Node.js code interpreter support; fixed critical Python/Node.js session bugs; added performance tests identifying regressions.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Quantitative Research Intern}{May 2020 -- Jul 2020}
       {JP Morgan \& Chase -- E-Trading}{Mumbai, India (Remote)}
       \resumeItemListStart
-        \resumeItemPlain{Built price prediction models using \textbf{LSTM}, feedforward neural networks, and regression with univariate feature selection.}
-        \resumeItemPlain{Improved model predictive power by \textbf{40\%} for HK names through feature standardization and data preprocessing.}
+        \resumeItemPlain{Built price prediction models using \textbf{LSTM}, feedforward neural networks, and regression with univariate feature selection; improved predictive power by \textbf{40\%} for HK names through feature standardization.}
         \resumeItemPlain{Implemented L1 and L2 features for optimizing model parameterization across multiple asset classes.}
       \resumeItemListEnd
 
@@ -149,19 +149,14 @@
     \small{\item{
      \textbf{Languages}{: Go, Python, C\#/.NET, JavaScript/TypeScript, C/C++} \\
      \textbf{Cloud \& Infrastructure}{: Azure (Container Apps, AKS, Functions, Key Vault, Event Hubs, CosmosDB), Kubernetes, Docker, Dapr (CNCF), Helm} \\
-     \textbf{Tools \& CI/CD}{: OneBranch (1ES), Ev2, Azure DevOps Pipelines, GitHub Actions, Git, Geneva, CodeQL, KEDA} \\
-     \textbf{Domains}{: Distributed Systems, AI/LLM Agents, CI/CD \& Release Engineering, Microservices, Site Reliability (SRE)}
+     \textbf{Tools \& CI/CD}{: OneBranch (1ES), Ev2, Azure DevOps Pipelines, GitHub Actions, Git, Geneva, Kusto/ADX, CodeQL, KEDA, Argus} \\
+     \textbf{Domains}{: Distributed Systems, AI/LLM Agents, AI-Augmented Engineering (Copilot review skills, e2e stamp validation), Site Reliability (SRE), CI/CD \& Release Engineering}
     }}
  \end{itemize}
 
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeProjectHeading
-      {\href{https://github.com/shivamkm/java-compiler}{\textbf{Java Compiler}} $|$ \emph{Python, PLY, Compiler Design (CS335)}}{Jan 2020 -- Apr 2020}
-      \resumeItemListStart
-        \resumeItemPlain{Designed lexer, parser, and 3-address code generation; support for symbol tables, classes, functions, and interfaces.}
-      \resumeItemListEnd
     \resumeProjectHeading
       {\href{https://github.com/shivamkm/gemOS}{\textbf{GemOS}} $|$ \emph{C, x86, Operating Systems (CS330)}}{Aug 2019 -- Nov 2019}
       \resumeItemListStart
@@ -171,11 +166,6 @@
       {\href{https://github.com/shivamkm/machine-learning}{\textbf{Machine Learning}} $|$ \emph{Python, Keras, ML (CS771)}}{Aug 2019 -- Nov 2019}
       \resumeItemListStart
         \resumeItemPlain{CNN image classification using Keras; SGD for binary classification; multi-label Bonsai recommender system.}
-      \resumeItemListEnd
-    \resumeProjectHeading
-      {\href{https://github.com/shivamkm/mobile-app}{\textbf{MERN Mobile App}} $|$ \emph{React Native, Node.js, MongoDB (CS252)}}{May 2019 -- Jul 2019}
-      \resumeItemListStart
-        \resumeItemPlain{Full-stack mobile app with React Native frontend, Node.js/Express backend, MongoDB, and secure JWT login.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 

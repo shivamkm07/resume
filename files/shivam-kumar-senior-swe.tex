@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in LaTeX
+% Based on: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[a4paper,9pt]{extarticle}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure PDF is machine readable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItemPlain{#1}\vspace{-4pt}}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{#1 \vspace{-3pt}}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Shivam Kumar} \\ \vspace{1pt}
+    \small
+    \href{tel:+919129085031}{+91-9129085031} \,$\vcenter{\hbox{\footnotesize\faMobile}}$
+    $|$
+    \href{mailto:shivamkm07@gmail.com}{shivamkm07@gmail.com} \,$\vcenter{\hbox{\footnotesize\faEnvelope}}$
+    $|$
+    \href{https://www.linkedin.com/in/shivamkm07}{linkedin.com/in/shivamkm07} \,$\vcenter{\hbox{\footnotesize\faLinkedin}}$
+    $|$
+    \href{https://github.com/shivamkm07}{github.com/shivamkm07} \,$\vcenter{\hbox{\footnotesize\faGithub}}$
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     SDE II with 5+ years at Microsoft building large-scale cloud-native platforms, distributed systems, and Kubernetes-based container infrastructure on Azure. Deep expertise across microservices architecture, AI/LLM-powered SRE automation and Dapr, a CNCF Graduated project. Recognized for high-impact delivery: IDC Pinnacle FY'26 Best AI Success Story; 2$\times$ RockStar Award.
+    }}
+ \end{itemize}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Development Engineer II}{Jul 2024 -- Present}
+      {Microsoft -- Azure Container Apps}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItemPlain{Engineered AI-powered SRE agent for Azure Container Apps, reducing P50 TTM by \textbf{97\%} and TTR by \textbf{64\%}; implemented RCA capabilities, automated self-repair, intelligent resolution, and Ev2 deployment pipelines.}
+        \resumeItemPlain{Enhanced Azure Functions on ACA with graceful draining, secure function key management, KEDA scaling-rule customization, JWT clock-skew tolerance, invocation tracing, and durable-event logging; deployed to \textbf{$\sim$1,322} external apps.}
+        \resumeItemPlain{Drove ACA Express Public Preview on Azure Dev Compute (ADC), resolving P0 blockers via ephemeral volume support and Log Analytics customer-log delivery; unblocked migration path for \textbf{$\sim$100K+} ACA environments.}
+        \resumeItemPlain{Owned ACA Sessions management APIs and resolved critical async execution bugs, improving platform stability for \textbf{$\sim$300} external customers; enabled early session deletion for the Fabric team, optimizing resource utilization and costs.}
+        \resumeItemPlain{Led Dapr AKS Extension rollouts (v1.15, v1.16), remediating CVEs across \textbf{$\sim$400} AKS clusters and integrating CodeQL scanning for enhanced security posture.}
+        \resumeItemPlain{Architected Foundry Control Plane (FCP) integration for ACA agentic apps, supporting both customer-declared and auto-detected agent models; enables \textbf{$\sim$2,000+} agentic applications to be centrally managed via FCP.}
+        % \resumeItemPlain{Served as \textbf{on-call DRI} across multiple rotations, resolving \textbf{240+ incidents (65+ CRIs, 36 Sev2 LSIs)} --- P50 TTM 1h / TTR 25h vs ACA baselines of 3.9h/60h; mentored 2 engineers through first on-call rotations.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Development Engineer I}{Jul 2021 -- Jul 2024}
+      {Microsoft --  Dapr}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItemPlain{Stabilized Dapr building blocks by upgrading Configuration API, MQTT PubSub, CosmosDB state store, and Redis/PostgreSQL Configuration stores; added bulk-subscribe for Azure Event Hubs; enabled Dapr CLI airgap installation.}
+        \resumeItemPlain{Implemented Cascade Terminate/Purge for Dapr Workflows; identified and fixed scalability bottlenecks in Dapr workflows through comprehensive performance testing.}
+        \resumeItemPlain{Co-launched ACA Sessions with end-to-end ownership of Node.js and .NET code-interpreter support (adopted by Security Copilot); resolved critical session bugs and added regression tests protecting \textbf{3000+} active sessionPools.}
+        \resumeItemPlain{Designed Dapr's internal fork infrastructure across \textbf{5} repositories with a patch-based model; built OneBranch-compliant pipelines using Ev2 and automated OSS-to-internal releases with \textbf{$<$1} day SLA.}
+        \resumeItemPlain{Led multi-architecture support for Dapr and dashboard images; migrated to 1P Container Registry, established ACA nightly builds, and added Mariner and distroless images to MCR.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Quantitative Research Intern}{May 2020 -- Jul 2020}
+      {JP Morgan \& Chase -- E-Trading}{Mumbai, India (Remote)}
+      \resumeItemListStart
+        \resumeItemPlain{Built price prediction models using \textbf{LSTM}, feedforward neural networks, and regression with univariate feature selection; improved predictive power by \textbf{40\%} for HK names through feature standardization.}
+        \resumeItemPlain{Implemented L1 and L2 features for optimizing model parameterization across multiple asset classes.}
+        % \resumeItemPlain{Built price prediction models using LSTM, feedforward neural networks, and regression with univariate feature selection; improved predictive power by \textbf{40\%} for HK names via feature standardization.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{Research}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Data Race Detection for Task-Parallel Programs}{Jun 2019 -- Aug 2021}
+      {Supervisor: Prof. Swarnendu Biswas, IIT Kanpur}{}
+      \resumeItemListStart
+        \resumeItemPlain{Designed novel algorithm \textbf{Tasker} integrating vector clocks with tree-based techniques; implemented via \textbf{LLVM} memory instrumentation pass on task-parallel programs; achieved \textbf{1.48$\times$ speedup} over PTRacer with lower memory overhead on 128GB Intel Xeon.}
+        \resumeItemPlain{\textit{``Efficient Data Race Detection of Structured Task Parallel Programs Using Vector Clocks''} --- S.~Kumar, A.~Agrawal, S.~Biswas $|$ Submitted to ISCGO 2022.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{GemOS} $|$ \emph{C, x86 — OS kernel (IIT Kanpur CS330)}}{Aug 2019 -- Nov 2019}
+      \resumeItemListStart
+        \resumeItemPlain{Implemented mmap/munmap/mprotect with lazy allocation and page-fault handling; cfork/vfork with copy-on-write semantics.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\href{https://github.com/shivamkm/machine-learning}{\textbf{Machine Learning}} $|$ \emph{Python, Keras, ML (CS771)}}{Aug 2019 -- Nov 2019}
+      \resumeItemListStart
+        \resumeItemPlain{CNN image classification using Keras; SGD for binary classification; multi-label Bonsai recommender system.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\href{https://github.com/shivamkm/decipher}{\textbf{Cipher Decoder}} $|$ \emph{Python, Modern Cryptology (CS641)}}{Aug 2020 -- Nov 2020}
+      \resumeItemListStart
+        \resumeItemPlain{Differential cryptanalysis of 3-DES; decryption of Caesar, Vigenere ciphers using frequency analysis.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology, Kanpur}{CGPA: 9.4/10.0}
+      {Bachelor of Technology in Computer Science and Engineering}{2017 -- 2021}
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, C\#/.NET, Python,  C/C++} \\
+     \textbf{Cloud \& Infra}{: Azure(ACA, Functions, AKS), Kubernetes, Docker, Helm, KEDA} \\
+     \textbf{Distributed Systems \& Platforms}{: Dapr (CNCF), Microservices, Service Mesh, gRPC, Pub/Sub, Event-Driven Architecture} \\
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements \& Recognition}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{IDC Pinnacle FY'26 — Best AI Success Story} (ACA RCA Agent squad, $\sim$200+ competing teams) \\
+      \textbf{RockStar Award}, Microsoft ('22, '23) for exceptional engineering contributions \\
+      \textbf{Academic Excellence Award} ($\times$2), IIT Kanpur $|$ JEE Advanced \textbf{AIR 715} $|$ JEE Mains \textbf{AIR 348} $|$ KVPY Scholar $|$ NSE Physics \textbf{Top 1\%}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

@@ -238,5 +238,90 @@ b. Automatically resolve the incidents that can be resolved
 5. Azure functions - Adding parity between Azure functions on ACA and native azure functions, Adding missing things on Azure functions on ACA
 
 
+May 2026:
+Reflection Period: Nov 25, 2025 - May 15, 2026
+Source: https://v2.msconnect.microsoft.com/historyrag?connectid=c3ed1d03-11ff-4295-aa82-578b26db7a11&pernr=6153317
+
+Employee Response (What results delivered, and how):
+Over the last six months focused on four investments — making Functions on ACA reliable enough to be the default for event-driven workloads, contributing to improving the ACA RCA Agent through a series of experiments, integrating Express Apps with ADC to unblock Public Preview, and integrating ACA with Foundry Control Plane so agentic apps are first-class. Leveraged AI heavily — Copilot for code, a deep-review skill for PR quality, and the RCA Agent itself as a daily driver — staying grounded in disciplined delivery and on-call ownership.
+
+Project Impact:
+
+- Express Apps on ADC:
+  Closed two of the largest gaps holding back Express Public Preview — ephemeral volume support and Log Analytics customer-log delivery — by landing changes on both the ADC and ACA sides so the end-to-end flow works through a single customer-facing surface.
+  LA delivery is the migration path for the ~250,000 ACA environments using LA today (~100K+ per manager comments) as they evaluate Express.
+  Manager note: this is the P0 migration blocker for ACA environments migrating to Express, saving ~$40M annual in COGs.
+
+- Functions on ACA reliability:
+  Designed and shipped graceful drain for managed function apps so in-flight function executions complete cleanly during scale-in — an active pain point that surfaced as three separate CRIs with the same error.
+  Delivered queueLength override for queue triggers, scale-rule override, and a JWT clock-skew leeway — lifting trigger fidelity and auth stability for managed Function and Logic apps.
+  Manager note: ~5K active apps; component became stable enough that the most frequent CRIs are gone now.
+
+- ACA RCA Agent:
+  Contributed to improving the agent through a series of experiments lifting accuracy and visibility of generated RCAs across CRIs and LSIs.
+  Agent now posts an RCA on ~99% of incidents; on-call rates the root cause correct on ~76% over the last 30 days.
+  In six months auto-resolved 57 of ~400 CRIs and authored ~132 repair items.
+  Extended subagent skills with concrete customer-incident patterns (SAL-deletion, Geneva 503, env-delete with orphaned LBs).
+  Stood up the Ev2 deployment pipeline so the agent ships through standard Azure release machinery instead of manual updates that previously caused conflicts when changes landed close together.
+  Manager note: agentic workflow is a hero example across the org; squad won the best AI success story award at IDC Pinnacle FY'26 year-end awards among ~200+ teams.
+
+- FCP integration with ACA:
+  Designed and shipped the integration that lets Foundry Control Plane discover and surface agentic apps on ACA.
+  Supports both customer-declared and auto-detection modes, wired through a new preview API across clouds, CP, and CRD.
+  Covers ~1,200 potential agentic apps on ACA today (~2K+ per manager), making ACA a first-class hosting target for agents in Foundry.
+  Manager note: Foundry integration was later shelved due to Foundry re-architecture, but the ACA-side foundation laid significant observability for agentic workload patterns.
+
+- Functions observability in central Kusto:
+  Routed FunctionsLogs, FunctionsMetrics, DurableFunctionsEvents from the legacy waws Kusto clusters into the modern capps clusters — resolving storage pressure on the old App Service clusters and unblocking alerting, customer detectors, and many agent skills through a single query surface.
+  Required solving a non-trivial issue on the Legion side for consumption function apps where logs were not flowing.
+
+- Dapr-AKS extension (Contributor):
+  Shipped a security-vulnerability fix release, drove the next Dapr extension version through prod, and added a daily extension-only rollout so artifacts stay fresh.
+  Manager note: this workstream is now offloaded to allow focus on higher-impact areas.
+
+- DRI / on-call:
+  Resolved 38 CRIs and 84 LSIs (36 Sev2s), maintaining customer obsession and platform reliability.
+  Fed agent feedback and skill updates back from incidents the agent struggled on so its accuracy keeps improving, including weekly IcM discussions off-shift.
+
+Craft:
+- Incorporated Copilot self-review on PRs with three parallel perspectives — Advocate defending intent, Skeptic hunting regressions and edge cases, Architect evaluating direction — to catch issues before review. Used the same skill on peer PRs as a deeper second-opinion pass.
+- Used Copilot across the full flow — design → implementation → PR review — and made e2e validation on a private stamp a standard step before merging any meaningful feature change.
+- Used Argus security-scan tool to scan the Dapr repo for vulnerabilities; shared the report with the team along with action items to fix the highest-risk ones.
+- Kept the codebase tidy: removed dead types, aligned client contracts with service changes, and added docs in the same PR as design changes.
+
+Direction:
+- Log Analytics integration in ADC: drove a detailed discussion with the ADC team on the correct way to add LA Collector API support — evaluating ADC-native vs an ACA-specific sidecar model. Got sign-off from ADC and key stakeholders before any code landed, avoiding future churn.
+- Reused ADC's existing volume infrastructure for ACA ephemeral-storage parity instead of adding a new kind — kept integration small and shipped in-window.
+- For FCP, supported both auto-detection and customer-declared modes so customers retain control while we still get coverage for apps that don't self-declare.
+
+People:
+- Actively worked with Khushi and Divyansh, both doing on-call for the first time — helping with faster customer resolution and unblocking issues during their on-call and dev flows. Continued mentoring Khushi separately on agent-platform and scaling-rules PRs.
+- Worked closely with ADC, Functions, FCP, and SRE-Agent teams to land cross-org features end-to-end.
+- Took ad-hoc on-call shifts when teammates' plans changed; stayed engaged in CRI/LSI discussions off-shift.
+- Shared learnings on AI tooling with the AppPlat team, helping teammates lift their AI fluency.
+
+Setback Reflection:
+- Drain feature shipped early in the period was followed by two unintended consequences — a revision regression where unrelated edits started creating new revisions, and a nil-dereference that fired a Sev3 ICM.
+- Lesson: in a multi-tenant platform every PR is a behavioural diff, not just a code diff; blast radius needs to be reasoned through up-front.
+- Now walking through each change with a "what does this change for every existing customer" lens, validating end-to-end on a private stamp before merging, and running the Advocate-Skeptic-Architect review skill on own PRs first — especially as Copilot makes authoring fast and the bottleneck has shifted to verification.
+
+Goals for upcoming period:
+1. Increase Adoption for ACA — Express reliability and parity; ACA on-call; deliver on prioritized ACA initiatives.
+2. Drive ACA Agent Harness for a Toil-Free Dev-to-Deploy Loop — full PR lifecycle (review → merge → deploy → monitor) with regression correlation; bake SRE work (health sweeps, config-drift, stale-resource cleanup) into agent; expose SRE intelligence via MCP; partner with intern.
+3. Sustain ACA Key Surfaces — Functions on ACA, Dapr AKS Extension, SRE Agent.
+4. Empower DevDiv India team — culture, org-wide efforts, trainings.
+
+Manager comments highlights (Rajneesh Mitharwal):
+- Operates with end-to-end ownership: design → implementation → deployment → production validation.
+- Express Apps on ADC: closed largest gap holding back Public Preview (June 2026); P0 migration blocker for 100K+ ACA environments; ~$40M annual COGs savings target.
+- Functions on ACA: stabilized ~5K active apps; gave junior engineer space to learn and own parts of feature set.
+- ACA RCA Agent: hero example across the org; squad won best AI success story at IDC Pinnacle FY'26 among ~200+ teams.
+- FCP integration: shelved due to Foundry re-architecture but ACA-side foundation laid significant observability.
+- Functions observability: persistence in solving Legion-side issue.
+- Direction: drove sign-off from key stakeholders before code landed; reused existing infrastructure to keep integrations small.
+- People: approachable, deeply knowledgeable, mentors first-time on-call teammates, takes ad-hoc shifts.
+- Setback handling: regression caught in early regions by system, learned the right lessons; agent harness work expected to improve this loop for developers org-wide.
+
+
 
 
