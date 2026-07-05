@@ -1,0 +1,170 @@
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\linespread{1.04}
+
+\titleformat{\section}{
+  \vspace{-9pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shubham Kumar} \\ \vspace{2pt}
+    \small B.Tech Computer Science Engineering (3rd Year) \\ \vspace{3pt}
+    \small 7870841473 ~ $|$ ~
+    \href{mailto:shubhamkm07@gmail.com}{shubhamkm07@gmail.com} ~ $|$ ~
+    \href{https://www.linkedin.com/in/shubham-kumar-05a9a5285/}{linkedin.com/in/shubham-kumar} ~ $|$ ~
+    \href{https://github.com/myselfshubham1}{github.com/myselfshubham1}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ITM University}{CGPA: 8.3/10.0}
+      {B.Tech -- Computer Science Engineering}{2023 -- 2027}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++, Java, Python, SQL} \\
+     \textbf{Core CS}{: Data Structures \& Algorithms, Object-Oriented Programming, DBMS, Operating Systems} \\
+     \textbf{Backend / Systems}{: C++ STL, File Handling, MySQL, REST APIs, Postman, JWT Authentication} \\
+     \textbf{Frameworks / Libraries}{: React.js, Next.js, Express.js, Node.js, TypeScript} \\
+     \textbf{Database}{: MySQL, MongoDB, Mongoose, PostgreSQL, Prisma ORM} \\
+     \textbf{Deployment / Tools}{: Vercel, Neon Serverless PostgreSQL, Git, Vite} \\
+     \textbf{AI / ML}{: NumPy, Pandas, Scikit-learn, YOLOv8, OpenCV} \\
+     \textbf{Web}{: HTML, CSS, JavaScript, React}
+    }}
+ \end{itemize}
+
+%-----------RELEVANT COURSEWORK-----------
+\section{Relevant Coursework}
+\small{Data Structures \& Algorithms $\cdot$ Object-Oriented Programming $\cdot$ Database Management Systems $\cdot$ Operating Systems $\cdot$ Computer Networks $\cdot$ Software Engineering $\cdot$ Discrete Mathematics $\cdot$ Machine Learning}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Development Intern -- Blog Post Management System}{Industrial Training}
+      {Intellige IT Studio}{Java, MySQL, REST APIs}
+    \resumeItemListStart
+        \resumeItem{Completed industry-oriented software development training and built a fully functional blog post management system using \textbf{Java, MySQL, HTML, CSS, REST APIs, and Postman}.}
+        \resumeItem{Designed and implemented \textbf{REST}-based backend APIs for blog and user management supporting full CRUD operations (create, update, search, delete).}
+        \resumeItem{Implemented user and admin roles with role-based access control for secure content management.}
+        \resumeItem{Enabled tracking of creation and update timestamps for blogs, ensuring data audit capabilities.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{MCP Server -- AI-Driven 3D Model Generation} $|$ \emph{Python, Socket Programming, Blender, Cursor AI}}{}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a custom \textbf{MCP server} using socket-based communication for real-time tool integration.}
+        \resumeItem{Integrated \textbf{Blender} and \textbf{Cursor AI} to enable 3D object generation using natural language prompts.}
+        \resumeItem{Built a scalable, real-time system capable of connecting multiple tools simultaneously.}
+        \resumeItem{Enabled full customization and modification of 3D models based on user input.}
+        \resumeItem{Implemented robust error handling and reconnection logic to maintain stable socket connections during long-running generation tasks.}
+        \resumeItem{Structured the MCP protocol interface to be extensible, enabling future AI tools to plug into the server with minimal integration overhead.}
+      \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{CivicChain -- Civic Intelligence Platform} $|$ \emph{React, TypeScript, Vite, Node.js, Express, PostgreSQL, Prisma}}{}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack civic-tech web application enabling citizens to report geo-tagged civic issues, track resolution status, and monitor ward-level official accountability and public spending.}
+        \resumeItem{Architected the frontend with \textbf{React, TypeScript, and Vite}, integrating \textbf{Mapbox GL JS} for interactive WebGL mapping with heatmaps, 3D buildings, and custom geographic clustering.}
+        \resumeItem{Designed a \textbf{PostgreSQL} database with \textbf{Prisma ORM} to model issues, ward officials, and users with relational mappings, replacing the initial \textbf{MongoDB} prototype for stronger relational integrity.}
+        \resumeItem{Implemented secure \textbf{JWT}-based authentication with role-based access and a dual-mode auth system supporting both local and API-based sign-in.}
+        \resumeItem{Developed a \textbf{REST API} using \textbf{Express} and \textbf{Node.js} with endpoints for issue reporting, community upvoting, and a ward-official accountability dashboard (NetaMeter) with trust and resolution scores.}
+        \resumeItem{Deployed the application on \textbf{Vercel} with a live production build, using \textbf{Neon serverless PostgreSQL} for the database layer.}
+      \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------MINI PROJECTS-----------
+\section{Mini Projects}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{To-Do Application}{ -- Full-stack task management app with CRUD functionality} \\
+     \textbf{Chatbot}{ -- Interactive conversational bot using rule-based/NLP techniques} \\
+     \textbf{Calculator}{ -- Multi-function calculator application with scientific operations} \\
+     \textbf{Profile Calculator}{ -- Profile analytics and scoring tool} \\
+     \textbf{Number Guessing Game}{ -- Interactive CLI game with randomized logic and difficulty levels}
+    }}
+ \end{itemize}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements \& Hackathons}
+  \resumeItemListStart
+    \resumeItem{Winner -- Hackathon conducted by ITM University}
+    \resumeItem{Finalist -- ``FinShield'' Hackathon conducted by Bank of India; presented solution at IIT Hyderabad}
+    \resumeItem{Participant -- Smart India Hackathon (SIH) and actively participated in multiple inter-college hackathons}
+  \resumeItemListEnd
+
+\end{document}

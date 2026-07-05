@@ -1,0 +1,202 @@
+%-------------------------
+% Shubham Kumar Resume
+%-------------------------
+
+\documentclass[a4paper,9pt]{extarticle}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[empty]{fullpage}
+\usepackage{charter}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pdfgentounicode=1
+
+\definecolor{accent}{rgb}{0.09,0.29,0.49}
+\definecolor{textgray}{rgb}{0.20,0.20,0.20}
+\definecolor{rulegray}{rgb}{0.72,0.78,0.84}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent
+}
+
+\pagestyle{empty}
+\addtolength{\oddsidemargin}{-0.44in}
+\addtolength{\evensidemargin}{-0.44in}
+\addtolength{\textwidth}{0.88in}
+\addtolength{\topmargin}{-0.62in}
+\addtolength{\textheight}{1.26in}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\raggedright
+\urlstyle{same}
+
+\newcommand{\resumeTextSpacing}{\setlength{\baselineskip}{11.45pt}\spaceskip=0.34em plus 0.08em minus 0.03em\xspaceskip=0.45em plus 0.10em minus 0.04em}
+
+\titleformat{\section}
+  {\color{accent}\large\bfseries}
+  {}
+  {0pt}
+  {\MakeUppercase}
+  [\vspace{1pt}\color{rulegray}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+\newcommand{\contactSep}{\hspace{0.5em}{\color{rulegray}|}\hspace{0.5em}}
+\newcommand{\projectLink}[2]{\href{#1}{\textcolor{textgray}{#2}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{\color{textgray}#1} & \textbf{\small #2} \\
+    {\small\textit{#3}} & {\small\textit{#4}} \\
+  \end{tabularx}
+  \vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{2pt}
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{\color{textgray}#1} & \textbf{\small #2} \\[1pt]
+    \multicolumn{2}{@{}p{\textwidth}@{}}{\resumeTextSpacing #3} \\
+  \end{tabularx}
+  \vspace{-2pt}
+}
+
+% Project title line (name + tech stack) to sit above a bullet list
+\newcommand{\resumeProjectTitle}[2]{%
+  \vspace{3pt}%
+  \textbf{\color{textgray}#1}\enspace{\color{rulegray}\textbar}\enspace{\small\itshape #2}\par
+  \vspace{-1pt}
+}
+
+\newcommand{\resumeItemPlain}[1]{\item #1}
+
+\newenvironment{resumeItemList}{
+  \begin{itemize}[
+    leftmargin=0.18in,
+    label={\color{accent}\bfseries--},
+    itemsep=1.1pt,
+    topsep=1.4pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]\resumeTextSpacing
+}{
+  \end{itemize}\vspace{0pt}
+}
+
+\newcommand{\skillrow}[2]{
+  \textbf{#1} & \hspace{0.35em}#2 \\
+}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge\bfseries\color{accent} Shubham Kumar}\\[3pt]
+  % {\small\color{textgray} B.Tech Computer Science and Engineering}\\[5pt]
+  \small
+  \href{tel:+917870841473}{+91-7870841473}
+  \contactSep
+  \href{mailto:shubhamkm07@gmail.com}{shubhamkm07@gmail.com}
+  \contactSep
+  \href{https://www.linkedin.com/in/shubham-kumar-05a9a5285/}{linkedin.com/in/shubham-kumar}
+  \contactSep
+  \href{https://github.com/myselfshubham1}{github.com/myselfshubham1}
+\end{center}
+\vspace{-3pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubheading
+  {ITM University}{CGPA: 8.3/10.0}
+  {B.Tech in Computer Science and Engineering}{2023 -- 2027}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\fontsize{9.4}{10.2}\selectfont\resumeTextSpacing
+\begingroup
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\textwidth}{@{}p{1.6in}X@{}}
+  \skillrow{Languages:}{C, C++, Java, Python, SQL}
+  \skillrow{Core CS:}{Data Structures \& Algorithms, Object-Oriented Programming, DBMS, Operating Systems}
+  \skillrow{Backend / Systems:}{File Handling, MySQL, REST APIs, JWT Authentication}
+  \skillrow{Frameworks / Libraries:}{NumPy, Pandas, Scikit-learn, YOLOv8, OpenCV} %, React.js, Next.js, Express.js, Node.js, TypeScript}
+  % \skillrow{Databases:}{MySQL, MongoDB, Mongoose, PostgreSQL, Prisma ORM}
+  \skillrow{Deployment / Tools:}{Vercel, Postman, Git, Vite}
+  % \skillrow{AI / ML:}{NumPy, Pandas, Scikit-learn, YOLOv8, OpenCV}
+  \skillrow{Web:}{HTML, CSS, JavaScript, React}
+\end{tabularx}
+\endgroup
+
+%-----------RELEVANT COURSEWORK-----------
+\section{Relevant Coursework}
+\resumeTextSpacing
+Data Structures \& Algorithms $\cdot$ Object-Oriented Programming $\cdot$ Database Management Systems $\cdot$ Operating Systems $\cdot$ Computer Networks $\cdot$ Software Engineering $\cdot$ Discrete Mathematics $\cdot$ Machine Learning
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+
+\resumeSubheading
+  {Software Development Intern --- Blog Post Management System}{Industrial Training}
+  {Intellige IT Studio}{Java, MySQL, REST APIs}
+\begin{resumeItemList}
+  \resumeItemPlain{Completed industry-oriented software development training and built a fully functional blog post management system using \textbf{Java, MySQL, HTML, CSS, REST APIs, and Postman}.}
+  \resumeItemPlain{Designed and implemented \textbf{REST}-based backend APIs for blog and user management supporting full CRUD operations (create, update, search, delete).}
+  \resumeItemPlain{Implemented user and admin roles with role-based access control for secure content management.}
+  \resumeItemPlain{Enabled tracking of creation and update timestamps for blogs, ensuring data audit capabilities.}
+\end{resumeItemList}
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeProjectTitle{MCP Server --- AI-Driven 3D Model Generation}{Python, Socket Programming, Blender, Cursor AI}
+\begin{resumeItemList}
+  \resumeItemPlain{Designed and implemented a custom \textbf{MCP server} using socket-based communication for real-time tool integration.}
+  \resumeItemPlain{Integrated \textbf{Blender} and \textbf{Cursor AI} to enable 3D object generation using natural language prompts.}
+  \resumeItemPlain{Built a scalable, real-time system capable of connecting multiple tools simultaneously.}
+  \resumeItemPlain{Enabled full customization and modification of 3D models based on user input.}
+  \resumeItemPlain{Implemented robust error handling and reconnection logic to maintain stable socket connections during long-running generation tasks.}
+  \resumeItemPlain{Structured the MCP protocol interface to be extensible, enabling future AI tools to plug into the server with minimal integration overhead.}
+\end{resumeItemList}
+
+\resumeProjectTitle{CivicChain --- Civic Intelligence Platform}{React, TypeScript, Vite, Node.js, Express, PostgreSQL, Prisma}
+\begin{resumeItemList}
+  \resumeItemPlain{Built a full-stack civic-tech web application enabling citizens to report geo-tagged civic issues, track resolution status, and monitor ward-level official accountability and public spending.}
+  \resumeItemPlain{Architected the frontend with \textbf{React, TypeScript, and Vite}, integrating \textbf{Mapbox GL JS} for interactive WebGL mapping with heatmaps, 3D buildings, and custom geographic clustering.}
+  \resumeItemPlain{Designed a \textbf{PostgreSQL} database with \textbf{Prisma ORM} to model issues, ward officials, and users with relational mappings, replacing the initial \textbf{MongoDB} prototype for stronger relational integrity.}
+  \resumeItemPlain{Implemented secure \textbf{JWT}-based authentication with role-based access and a dual-mode auth system supporting both local and API-based sign-in.}
+  \resumeItemPlain{Developed a \textbf{REST API} using \textbf{Express} and \textbf{Node.js} with endpoints for issue reporting, community upvoting, and a ward-official accountability dashboard (NetaMeter) with trust and resolution scores.}
+  \resumeItemPlain{Deployed the application on \textbf{Vercel} with a live production build, using \textbf{Neon serverless PostgreSQL} for the database layer.}
+\end{resumeItemList}
+
+%-----------MINI PROJECTS-----------
+\section{Mini Projects}
+\begin{resumeItemList}
+  \resumeItemPlain{\textbf{To-Do Application} --- Full-stack task management app with CRUD functionality.}
+  \resumeItemPlain{\textbf{Chatbot} --- Interactive conversational bot using rule-based/NLP techniques.}
+  \resumeItemPlain{\textbf{Calculator} --- Multi-function calculator application with scientific operations.}
+  \resumeItemPlain{\textbf{Profile Calculator} --- Profile analytics and scoring tool.}
+  \resumeItemPlain{\textbf{Number Guessing Game} --- Interactive CLI game with randomized logic and difficulty levels.}
+\end{resumeItemList}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements \& Hackathons}
+\begin{resumeItemList}
+  \resumeItemPlain{\textbf{Winner} --- Hackathon conducted by ITM University.}
+  \resumeItemPlain{\textbf{Finalist} --- ``FinShield'' Hackathon conducted by Bank of India; presented solution at \textbf{IIT Hyderabad}.}
+  \resumeItemPlain{\textbf{Participant} --- Smart India Hackathon (SIH); actively participated in multiple inter-college hackathons.}
+\end{resumeItemList}
+
+%-------------------------------------------
+\end{document}
